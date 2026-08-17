@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-ink-900/10 dark:border-white/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper-50 text-ink-900 font-body antialiased transition-colors duration-300;
+    @apply dark:bg-navy-950 dark:text-paper-100;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    @apply bg-lime text-navy-950;
+  }
+
+  /* Visible, accessible focus ring for keyboard users */
+  :focus-visible {
+    @apply outline-none ring-2 ring-electric ring-offset-2 ring-offset-paper-50 dark:ring-offset-navy-950 rounded-sm;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full rounded-lg border border-ink-900/15 dark:border-white/15 bg-paper-50 dark:bg-navy-900 px-3.5 py-2.5 text-sm text-ink-900 dark:text-paper-100 placeholder:text-ink-500/60 dark:placeholder:text-paper-100/30 focus:border-electric dark:focus:border-lime transition-colors;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    @apply bg-grid-light dark:bg-grid-dark;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .label-mono {
+    @apply font-mono text-xs uppercase tracking-[0.18em] text-electric dark:text-lime;
+  }
+
+  .surface {
+    @apply bg-white dark:bg-navy-800 shadow-card-light dark:shadow-card border border-ink-900/5 dark:border-white/5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

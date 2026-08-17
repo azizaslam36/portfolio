@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B2436"/>
+      <stop offset="100%" stop-color="#0A0E17"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#g)"/>
+  <g stroke="#B7F227" stroke-width="1.5" opacity="0.35">
+    <circle cx="200" cy="190" r="70" fill="none"/>
+    <path d="M90 430 Q200 300 310 430" fill="none"/>
+  </g>
+  <text x="200" y="470" font-family="monospace" font-size="14" fill="#B7F227" text-anchor="middle" opacity="0.8">add-portrait.jpg</text>
+</svg>

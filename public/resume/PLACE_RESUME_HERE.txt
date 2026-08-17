@@ -1,0 +1,10 @@
+Add your resume PDF in this folder, named exactly:
+
+  Mohd-Aziz-Aslam-Resume.pdf
+
+This matches the path already referenced in:
+  - src/data/portfolio.ts (profile.resumePath)
+  - src/pages/ResumePage.tsx
+  - src/components/Navbar.tsx
+
+Once the file is here, delete this text file.
